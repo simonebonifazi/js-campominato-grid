@@ -20,10 +20,6 @@ Di cosa ho bisogno per generare i numeri?
 Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti.
 Le validazioni e i controlli possiamo farli anche in un secondo momento
 
-#MILESTONE 3
-In ogni cella, deve comparire il numero corrispondente, in ordine da 1 a 100;
-#MILESTONE 4
-Al click sulla cella, stampiamo il numero della cella cliccata in console, poi coloriamo la cella d'azzurro!
 
 */
 
@@ -38,10 +34,17 @@ steps milestone 2-- generazione celle
 steps milestone 3-- numerazione celle
 1. per far apparire il numero, mi servirà la i; come?
 2. posso aggiungere del testo con il valore della i per ogni cella
+3. do un po' di stile tramite css in fase refactoring
+*/
+/*
+steps milestone 4
+al click sulla cella, mi fa pensare ad un eventlistener sulla singola cella
+dove poi stamperò in console il suo numero e tramite css la coloro di azzurro.
+0. eventlistener sulla singola cella MA la vedo solo nel ciclo for!
 */
 
 
-//0.
+// milestone 2. 0.
 const gameStarter = document.getElementById('game-starter');
 const gameArea = document.getElementById('perimeter');
 
@@ -54,5 +57,15 @@ gameStarter.addEventListener('click', function () {
         //milestone 3. 
         cellElement.innerText = i;
         gameArea.appendChild(cellElement);
+
+        //milestone 4.
+        cellElement.addEventListener('click', function () {
+            console.log(i);
+            //in fase di refactoring adotterò il toggle che mi piace di più
+            cellElement.classList.add('clicked');
+        })
+
     }
 })
+    // #MILESTONE 4
+    // Al click sulla cella, stampiamo il numero della cella cliccata in console, poi coloriamo la cella d'azzurro!
