@@ -43,7 +43,18 @@ body {
 
 .perimeter-game,
 #perimeter>div {
-    border: 2px solid #fff
+    border: 2px solid #fff;
+    background-color: #23b312;
+}
+
+.cell {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.cell.clicked {
+    background-color: #00f;
+    cursor: not-allowed;
 }
 
 /* scelgo le dimensioni del perimetro tenendo presente dell'eventualità di dover affrontare il bonus, per cui divisibile per 7,9,10 */
@@ -56,8 +67,18 @@ body {
     flex-wrap: wrap;
 }
 
-
 #perimeter>div {
     width: calc(100% / 10);
     height: calc(100% / 10);
+}
+
+.cell {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
