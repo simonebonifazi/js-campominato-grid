@@ -62,6 +62,7 @@ gameStarter.addEventListener('click', function () {
     //2.
     //per non fargli stampare tutte le celle di volta in volta
     gameArea.innerHTML = '';
+    gameStarter.innerText = 'Ricomincia...'
 
     for (let i = 1; i <= totalRowsCols; i++) {
 
@@ -71,7 +72,7 @@ gameStarter.addEventListener('click', function () {
 
         //milestone 4.
         cellElement.addEventListener('click', function () {
-
+            //
             if (cellElement.classList.contains('clicked')) {
                 return;
             }
