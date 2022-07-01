@@ -20,9 +20,6 @@ Di cosa ho bisogno per generare i numeri?
 Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti.
 Le validazioni e i controlli possiamo farli anche in un secondo momento
 
-#MILESTONE 2
-Rimuoviamo le celle che abbiamo inserito nell'HTML in modo da generarle tramite JS.
-Al click del bottone play, vengono generate 100 celle in 10 righe da 10 celle ciascuna.
 #MILESTONE 3
 In ogni cella, deve comparire il numero corrispondente, in ordine da 1 a 100;
 #MILESTONE 4
@@ -35,18 +32,27 @@ steps milestone 2-- generazione celle
 0. creazione variabili globali connesse al DOM
 1. aggiungo evento allo scatenarsi del quale si generano le mie celle tramite |<=
 2.|=> ciclo for per creare elementi da inserire nel testo (con metodo appendChild)
-3. ? può servirmi una funzione? ? 
+3. ? può servirmi una funzione? ? prma faccio funzionare tutto, poi refacturing
 */
+/*
+steps milestone 3-- numerazione celle
+1. per far apparire il numero, mi servirà la i; come?
+2. posso aggiungere del testo con il valore della i per ogni cella
+*/
+
+
 //0.
 const gameStarter = document.getElementById('game-starter');
 const gameArea = document.getElementById('perimeter');
 
 //1. in questo caso mi chiedo: mi può tornare utile il .this? per stabilire se adottare arrow f o f ; non lo so, non ho ben capito .this
 gameStarter.addEventListener('click', function () {
+    //2.
     for (let i = 1; i <= 100; i++) {
         const cellElement = document.createElement('div');
         cellElement.className = 'cell';
-
+        //milestone 3. 
+        cellElement.innerText = i;
         gameArea.appendChild(cellElement);
     }
 })
