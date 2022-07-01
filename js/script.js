@@ -60,17 +60,24 @@ let cols = rows;
 let totalRowsCols = rows * cols;
 gameStarter.addEventListener('click', function () {
     //2.
+    //per non fargli stampare tutte le celle di volta in volta
+    gameArea.innerHTML = '';
+
     for (let i = 1; i <= totalRowsCols; i++) {
         const cellElement = createCell();
         //milestone 3. 
         cellElement.innerText = i;
         gameArea.appendChild(cellElement);
 
+
         //milestone 4.
         cellElement.addEventListener('click', function () {
-            console.log(i);
 
-            cellElement.classList.toggle('clicked');
+            cellElement.classList.add('clicked');
+            console.log(i);
+            // if (cellElement.classList.contains = 'clicked') {
+            // return;
+            // }
         })
 
     }
