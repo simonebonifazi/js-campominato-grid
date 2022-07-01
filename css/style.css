@@ -11,6 +11,14 @@
     margin: 0 auto;
 }
 
+.d-block {
+    display: block;
+}
+
+.d-none {
+    display: none;
+}
+
 /* header */
 header {
     height: 140px;
@@ -41,20 +49,8 @@ body {
     background-color: rgb(9, 202, 83);
 }
 
-.perimeter-game,
-#perimeter>div {
-    border: 2px solid #fff;
-    background-color: #23b312;
-}
-
 .cell {
-    border: 2px solid #fff;
-    color: #fff;
-}
-
-.cell.clicked {
-    background-color: #00f;
-    cursor: not-allowed;
+    border: 2px solid #fff
 }
 
 /* scelgo le dimensioni del perimetro tenendo presente dell'eventualità di dover affrontare il bonus, per cui divisibile per 7,9,10 */
@@ -67,18 +63,8 @@ body {
     flex-wrap: wrap;
 }
 
-#perimeter>div {
-    width: calc(100% / 10);
-    height: calc(100% / 10);
-}
 
 .cell {
     width: calc(100% / 10);
     height: calc(100% / 10);
-
-    cursor: pointer;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

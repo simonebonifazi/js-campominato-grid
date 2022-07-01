@@ -1,4 +1,3 @@
-
 /*
 Traccia:
 L'utente clicca su un bottone che genererà una griglia di gioco quadrata.
