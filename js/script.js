@@ -39,10 +39,10 @@ dove poi stamperò in console il suo numero e tramite css la coloro di azzurro.
 
 /* *********************************************
 creo la funzione per creare celle */
-function createCell() {
+function createCell(cellNumber) {
     const cell = document.createElement('div');
     cell.className = 'cell';
-
+    cell.innerText = cellNumber;
     return cell;
 }
 
@@ -64,22 +64,24 @@ gameStarter.addEventListener('click', function () {
     gameArea.innerHTML = '';
 
     for (let i = 1; i <= totalRowsCols; i++) {
-        const cellElement = createCell();
+
         //milestone 3. 
-        cellElement.innerText = i;
-        gameArea.appendChild(cellElement);
+        const cellElement = createCell(i);
 
 
         //milestone 4.
         cellElement.addEventListener('click', function () {
 
-            cellElement.classList.add('clicked');
+            if (cellElement.classList.contains('clicked')) {
+                return;
+            }
+
+
             console.log(i);
-            // if (cellElement.classList.contains = 'clicked') {
-            // return;
-            // }
+            cellElement.classList.add('clicked');
         })
 
+        gameArea.appendChild(cellElement);
     }
 })
 
